@@ -1,0 +1,30 @@
+.testimonials {
+  padding: 32px 0 72px;
+}
+
+.testimonials__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 32px;
+  text-align: left;
+}
+
+.testimonials__stars {
+  color: var(--star-yellow);
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.testimonials__text {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.testimonials__author {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
