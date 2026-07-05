@@ -1,4 +1,5 @@
 import Button from '../common/Button';
+import { Icon } from '../common/Icons';
 import './CTASection.css';
 
 const CTASection = () => {
@@ -16,9 +17,9 @@ const CTASection = () => {
         <div className="cta__right">
           <Button to="/quote" variant="primary">Request A Free Quote</Button>
           <div className="cta__perks">
-            <span>✓ Free Review</span>
-            <span>✓ Fast Response</span>
-            <span>✓ No Obligation</span>
+            <span><Icon.Check width={13} height={13} /> Free Review</span>
+            <span><Icon.Check width={13} height={13} /> Fast Response</span>
+            <span><Icon.Check width={13} height={13} /> No Obligation</span>
           </div>
         </div>
       </div>

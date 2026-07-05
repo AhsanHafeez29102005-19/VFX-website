@@ -54,6 +54,7 @@
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
+  z-index: 2;
 }
 
 .gallery__tag--before { left: 10px; }
@@ -73,6 +74,7 @@
   justify-content: center;
   color: white;
   font-size: 14px;
+  z-index: 2;
 }
 
 .gallery__caption {

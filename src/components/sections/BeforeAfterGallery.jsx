@@ -1,5 +1,6 @@
 import { portfolioItems } from '../../data/portfolio';
 import Button from '../common/Button';
+import galleryImg from '../../assets/images/img.png';
 import './BeforeAfterGallery.css';
 
 const BeforeAfterGallery = () => {
@@ -19,9 +20,10 @@ const BeforeAfterGallery = () => {
         </div>
 
         <div className="gallery__grid">
-          {portfolioItems.map((item) => (
+          {portfolioItems.slice(0, 4).map((item) => (
             <div className="gallery__item" key={item.id}>
               <div className="gallery__thumb">
+                <img src={galleryImg} alt={item.title} />
                 <span className="gallery__tag gallery__tag--before">Before</span>
                 <span className="gallery__tag gallery__tag--after">After</span>
                 <div className="gallery__play">▶</div>

@@ -1,33 +1,55 @@
-export const RotoscopeIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="3" />
-    <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
-  </svg>
-);
+/* Generic inline SVG icon set — no external icon library needed */
+const base = {
+  width: 22, height: 22, viewBox: '0 0 24 24', fill: 'none',
+  stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round',
+};
 
-export const CleanupIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 12l6 6L21 6" />
-  </svg>
-);
+export const Icon = {
+  Object: (p) => <svg {...base} {...p}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4" /></svg>,
+  Logo: (p) => <svg {...base} {...p}><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" /><path d="M9 12l2 2 4-4" /></svg>,
+  Wire: (p) => <svg {...base} {...p}><circle cx="6" cy="6" r="2" /><circle cx="18" cy="18" r="2" /><path d="M8 6c4 0 4 6 8 6s4 6 4 6" /></svg>,
+  People: (p) => <svg {...base} {...p}><circle cx="9" cy="8" r="3" /><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6" /><circle cx="17" cy="9" r="2.3" /><path d="M16 14.2c2.6.4 5 2.4 5 5.8" /></svg>,
+  Shadow: (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="5" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2 2M17 17l2 2M4.9 19.1l2-2M17 7l2-2" /></svg>,
+  Reflection: (p) => <svg {...base} {...p}><path d="M4 12h16M8 6l-4 6 4 6M16 6l4 6-4 6" /></svg>,
+  Mic: (p) => <svg {...base} {...p}><rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 11a7 7 0 0014 0M12 18v4M9 22h6" /></svg>,
+  Roto: (p) => <svg {...base} {...p}><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg>,
+  GreenScreen: (p) => <svg {...base} {...p}><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 4l9 9 9-9" /></svg>,
+  Hair: (p) => <svg {...base} {...p}><path d="M12 3c-4 0-6 3-6 7 0 3 1 5 2 7l2-3 2 3 2-3 2 3c1-2 2-4 2-7 0-4-2-7-6-7z" /></svg>,
+  Motion: (p) => <svg {...base} {...p}><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" /></svg>,
+  Product: (p) => <svg {...base} {...p}><path d="M21 8l-9-5-9 5 9 5 9-5z" /><path d="M3 8v8l9 5 9-5V8M12 13v8" /></svg>,
+  Vehicle: (p) => <svg {...base} {...p}><path d="M3 13l2-6h14l2 6v5H3v-5z" /><circle cx="7.5" cy="18" r="1.5" /><circle cx="16.5" cy="18" r="1.5" /></svg>,
+  Alpha: (p) => <svg {...base} {...p}><rect x="3" y="3" width="8" height="8" /><rect x="13" y="3" width="8" height="8" fill="currentColor" opacity="0.3" /><rect x="3" y="13" width="8" height="8" fill="currentColor" opacity="0.3" /><rect x="13" y="13" width="8" height="8" /></svg>,
+  ComputerScreen: (p) => <svg {...base} {...p}><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>,
+  PhoneScreen: (p) => <svg {...base} {...p}><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></svg>,
+  Billboard: (p) => <svg {...base} {...p}><rect x="3" y="4" width="18" height="10" rx="1" /><path d="M8 14v6M16 14v6" /></svg>,
+  Text: (p) => <svg {...base} {...p}><path d="M4 6h16M4 12h10M4 18h7" /></svg>,
+  Face: (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><circle cx="9" cy="10" r="1" /><circle cx="15" cy="10" r="1" /><path d="M9 15c1 1 5 1 6 0" /></svg>,
+  Plate: (p) => <svg {...base} {...p}><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M6 12h4M14 12h4" /></svg>,
+  Document: (p) => <svg {...base} {...p}><path d="M6 2h9l3 3v17H6z" /><path d="M9 10h6M9 14h6M9 18h4" /></svg>,
+  Email: (p) => <svg {...base} {...p}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>,
+  Phone: (p) => <svg {...base} {...p}><path d="M4 4c0 9 7 16 16 16l1-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5H4z" /></svg>,
+  Address: (p) => <svg {...base} {...p}><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" /><circle cx="12" cy="9" r="2.5" /></svg>,
+  Brand: (p) => <svg {...base} {...p}><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" /></svg>,
+  Blur: (p) => <svg {...base} {...p}><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" /><line x1="2" y1="2" x2="22" y2="22" /></svg>,
+  More: (p) => <svg {...base} {...p}><circle cx="5" cy="12" r="1.5" fill="currentColor" /><circle cx="12" cy="12" r="1.5" fill="currentColor" /><circle cx="19" cy="12" r="1.5" fill="currentColor" /></svg>,
+  Check: (p) => <svg {...base} {...p}><path d="M20 6L9 17l-5-5" /></svg>,
+  Clock: (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l4 2" /></svg>,
+  Shield: (p) => <svg {...base} {...p}><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" /></svg>,
+  Award: (p) => <svg {...base} {...p}><circle cx="12" cy="8" r="5" /><path d="M8 13l-2 8 6-3 6 3-2-8" /></svg>,
+  Headset: (p) => <svg {...base} {...p}><path d="M4 13a8 8 0 0116 0" /><rect x="2" y="13" width="4" height="6" rx="1" /><rect x="18" y="13" width="4" height="6" rx="1" /></svg>,
+  Send: (p) => <svg {...base} {...p}><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>,
+  Play: (p) => <svg {...base} {...p} fill="currentColor" stroke="none"><path d="M8 5v14l11-7L8 5z" /></svg>,
+  Whatsapp: (p) => <svg {...base} {...p}><path d="M4 20l1.5-4A8 8 0 1112 20a8 8 0 01-5-1.7L4 20z" /><path d="M9 9c0 3 3 6 6 6" /></svg>,
+  Linkedin: (p) => <svg {...base} {...p}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 17v-7" /></svg>,
+  Location: (p) => <svg {...base} {...p}><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" /><circle cx="12" cy="9" r="2.5" /></svg>,
+  Upload: (p) => <svg {...base} {...p}><path d="M12 16V4M8 8l4-4 4 4" /><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" /></svg>,
+  ChevronDown: (p) => <svg {...base} {...p}><path d="M6 9l6 6 6-6" /></svg>,
+};
 
-export const TrackingIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="4" width="18" height="13" rx="2" />
-    <path d="M8 21h8M12 17v4" />
-  </svg>
-);
-
-export const BlurIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" />
-    <line x1="2" y1="2" x2="22" y2="22" />
-  </svg>
-);
-
+/* Kept for backward compatibility with earlier ServicesGrid usage */
 export const iconMap = {
-  rotoscoping: RotoscopeIcon,
-  'vfx-cleanup': CleanupIcon,
-  'screen-tracking': TrackingIcon,
-  blur: BlurIcon,
+  rotoscoping: Icon.Roto,
+  'vfx-cleanup': Icon.Object,
+  'screen-tracking': Icon.ComputerScreen,
+  blur: Icon.Blur,
 };

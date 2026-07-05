@@ -36,6 +36,12 @@
   flex-wrap: wrap;
 }
 
+.cta__perks span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 @media (max-width: 800px) {
   .cta__inner {
     flex-direction: column;
