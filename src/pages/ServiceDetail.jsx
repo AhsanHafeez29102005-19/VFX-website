@@ -5,7 +5,7 @@ import { Icon } from '../components/common/Icons';
 import Button from '../components/common/Button';
 import refImg from '../assets/images/img.png';
 import './ServiceDetail.css';
-
+// styles are not used any where 
 const ServiceDetail = () => {
   const { slug } = useParams();
   const service = getServiceBySlug(slug);
@@ -93,7 +93,8 @@ const ServiceDetail = () => {
           );
         })}
       </div>
-
+// CTA section to be mantauned 
+// perfect cta , 
       {/* CTA */}
       <div className="container">
         <div className="service-detail__cta">
